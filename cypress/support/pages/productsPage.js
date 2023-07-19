@@ -1,3 +1,5 @@
+import { cart } from "./cartPage";
+
 export class productsPage {
 	shoppingCartContainerSelector = "#shopping_cart_container";
 	itemNameSelector = ".inventory_item_name";
@@ -9,12 +11,12 @@ export class productsPage {
 	sortingSelector = ".product_sort_container";
 
 	addToCart(nameOfItem) {
-		clickOnButtonForItem(nameOfItem, 'Add to cart');
+		this.clickOnButtonForItem(nameOfItem, 'Add to cart');
 		return this;
 	}
 
 	removeFromCart(nameOfItem) {
-		clickOnButtonForItem(nameOfItem, 'Remove')
+		this.clickOnButtonForItem(nameOfItem, 'Remove')
 		return this;
 	}
 
@@ -67,7 +69,8 @@ export class productsPage {
 	}
 
 	viewCart() {
-		cy.get(this.shoppingCartContainerSelector).click()
+		cy.get(this.shoppingCartContainerSelector).click();
+		return cart;
     }
 }
 
