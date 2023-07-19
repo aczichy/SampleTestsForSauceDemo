@@ -19,3 +19,12 @@
 3. Sorting products.
 
 
+## How to install cypress?
+To install Cypress use a command ```npm install cypress --save-dev
+
+
+## How to run tests?
+To run Cypress tests, use a command ```npx cypress run``` or ```npx cypress open``` (if you want to run tests in an open browser)
+
+
+
