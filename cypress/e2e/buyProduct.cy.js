@@ -12,7 +12,7 @@ describe("Should buy a product", () => {
 		login.login(Cypress.config("standardUser"), Cypress.config("password"));
 	});
 
-	it.only(`Should buy product`, () => {
+	it(`Should buy product`, () => {
 		// Act
 		products
 			.addToCart(nameOfItem)
@@ -26,6 +26,6 @@ describe("Should buy a product", () => {
 		// Assert
 		checkout
 			.validateInformation("Thank you for your order!")
-			.validateIfTitlehasText("Checkout: Complete!");
+			.validateIfTitleHasText("Checkout: Complete!");
 	});
 });

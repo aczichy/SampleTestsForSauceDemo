@@ -39,7 +39,7 @@ export class checkoutPage {
 		return this;
 	}
 
-	validateIfTitlehasText(text) {
+	validateIfTitleHasText(text) {
 		cy.get(this.titleSelector).should('contain.text', text);
 		return this;
     }
