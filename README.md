@@ -20,7 +20,7 @@
 
 
 ## How to install cypress?
-To install Cypress use a command ```npm install cypress --save-dev
+To install Cypress use a command ```npm install cypress --save-dev```
 
 
 ## How to run tests?
