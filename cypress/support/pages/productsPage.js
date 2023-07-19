@@ -8,12 +8,22 @@ export class productsPage {
 	shoppingCartBadgeSelector = ".shopping_cart_badge";
 	sortingSelector = ".product_sort_container";
 
+	addToCart(nameOfItem) {
+		clickOnButtonForItem(nameOfItem, 'Add to cart');
+		return this;
+	}
+
+	removeFromCart(nameOfItem) {
+		clickOnButtonForItem(nameOfItem, 'Remove')
+		return this;
+	}
+
+
 	clickOnButtonForItem(nameOfItem, nameOfButton) {
 		cy.contains(this.itemNameSelector, nameOfItem)
 			.parents(this.itemSelector)
 			.find(this.addToCartButtonSeletor, nameOfButton)
 			.click();
-		return this;
 	}
 
 	checkIfShoppingCartIsVisible() {
@@ -25,6 +35,7 @@ export class productsPage {
 			.parents(this.itemSelector)
 			.find(this.addToCartButtonSeletor)
 			.should("contain", name);
+		return this;
 	}
 
 	checkIfNumberOfItemInCartIsValid(number) {
@@ -54,6 +65,10 @@ export class productsPage {
 			expect(values).to.deep.equal(sortedValues);
 		});
 	}
+
+	viewCart() {
+		cy.get(this.shoppingCartContainerSelector).click()
+    }
 }
 
 export const products = new productsPage();

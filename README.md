@@ -27,4 +27,18 @@ To install Cypress use a command ```npm install cypress --save-dev```
 To run Cypress tests, use a command ```npx cypress run``` or ```npx cypress open``` (if you want to run tests in an open browser)
 
 
+## Test Architecture
+
+### Page Object Pattern
+
+Page Object Pattern is used in this project, which helps in separating the interaction logic with web pages from assertions in automated tests. This pattern contributes to improved readability, flexibility, and maintainability of tests.
+
+### Decision to Place Assertions in Page Objects
+
+The decision has been made to place assertions directly in the page object files. This approach was chosen for the following reasons:
+
+- Easier test maintenance,
+- Improved code readability,
+- Flexibility in reusing the same assertions across different tests.
+
 

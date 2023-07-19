@@ -18,21 +18,21 @@ describe("Operation on the Products page", () => {
 
 	it(`Should add item to cart`, () => {
 		// Act
-		products.clickOnButtonForItem(nameOfItem, "Add to cart");
+		products.addToCart(nameOfItem);
 
 		// Assert
-		products.checkIfButtonHasChangedNameOn(nameOfItem, "Remove");
-		products.checkIfNumberOfItemInCartIsValid(numberOfItemInCart);
+		products.checkIfButtonHasChangedNameOn(nameOfItem, "Remove")
+			.checkIfNumberOfItemInCartIsValid(numberOfItemInCart);
 	});
 
 	it(`Should remove item to cart`, () => {
 		// Act
-		products.clickOnButtonForItem(nameOfItem, "Add to cart");
-		products.clickOnButtonForItem(nameOfItem, "Remove");
+		products.addToCart(nameOfItem)
+			.removeFromCart(nameOfItem);
 
 		// Assert
-		products.checkIfButtonHasChangedNameOn(nameOfItem, "Add to cart");
-		products.checkIfThereIsNoItemsInCart();
+		products.checkIfButtonHasChangedNameOn(nameOfItem, "Add to cart")
+			.checkIfThereIsNoItemsInCart();
 	});
 
 	sortingValues.forEach((sort) => {

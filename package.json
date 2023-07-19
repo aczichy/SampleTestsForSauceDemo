@@ -1,4 +1,10 @@
 {
+  "name": "sauce-demo",
+  "version": "1.0.0",
+  "description": "sauce demo site tests",
+  "scripts": {
+    "test": "npx cypress run"
+  },
   "devDependencies": {
     "cypress": "^12.17.1"
   }
