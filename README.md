@@ -1,7 +1,7 @@
 ## Links
 
 - Test site https://www.saucedemo.com/ 
-- Code repository https://github.com/
+- Code repository https://github.com/aczichy/SampleTestsForSauceDemo
 
 ## Tests
 
